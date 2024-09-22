@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
-</head>
-<body>
-    <header></header>
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/128/10880/10880476.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend">
+    <header>
+      <!-- Navbar  -->
+      <div class="bg-[#F9F7F3] pb-20 md:pt-6 lg:pt-6 pt-5 mx-auto">
+        <div class="navbar container mx-auto">
+          <div class="navbar-start">
+            <button
+              class="btn md:btn-lg lg:btn-lg btn-md bg-[#B4F461] text- text-xl font-bold"
+            >
+              Blog
+            </button>
+          </div>
+          <div class="navbar-center">
+            <div>
+              <img class="w-full" src="./assets/logo.png" alt="" />
+            </div>
+
+            <p class="md:text-2xl font-bold pl-2 pr-6">Donate Bangladesh</p>
+          </div>
+          <div class="navbar-end">
+            <div class="flex gap-2 justify-center items-center">
+              <div>
+                <img class="w-full" src="./assets/coin.png" alt="" />
+              </div>
+              <span id="account-balance" class="text-xl font-semibold"
+                >5500</span
+              >
+              <h4 class="text-xl font-semibold">BDT</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Donation & History Button -->
+
+      <div class="container mx-auto flex justify-center items-center mt-16 gap-5">
+        <button id="donation-btn" class="btn btn-md  lg:btn-lg bg-[#B4F461] text-xl hover:bg-[#B4F461] hover:text-xl ">Donation</button>
+        <button id="history-btn" class="btn btn-md  lg:btn-lg text-xl text-gray-600 bg-white border-gray-600">History</button>
+      </div>
+    </header>
     <main></main>
-</body>
+  </body>
 </html>
