@@ -31,9 +31,9 @@
     </style>
   </head>
   <body class="lexend">
-    <header class="sticky top-0 backdrop-blur-md">
+    <header class="sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-10 border-b border-gray-200 ">
       <!-- Navbar  -->
-      <div class="bg-[#F9F7F3] pb-20 md:pt-6 lg:pt-6 pt-5">
+      <div class="bg-[#F9F7F3] backdrop-filter backdrop-blur-lg bg-opacity-60  pb-20 md:pt-6 lg:pt-6 pt-5">
         <div class="navbar container mx-auto">
           <div class="navbar-start">
             <button
@@ -212,6 +212,42 @@
     <div id="history-details" class="rounded-xl shadow-md  pt-7  container mx-auto hidden" >
       <div id="history-list"></div>
     </div>
+
+    <!-- Modal button -->
+    <!-- {/* Open the modal using document.getElementById('ID').showModal() method */} -->
+    <!-- <button className="btn">open modal</button>
+    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+      <div className="modal-box">
+        <h3 className="font-bold text-lg">Hello!</h3>
+        <p className="py-4">Press ESC key or click the button below to close</p>
+        <div className="modal-action">
+          <form method="dialog">
+            {/* if there is a button in form, it will close the modal */}
+            <button className="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog> -->
+
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box ">
+    <h3 class="text-3xl font-extrabold  text-center ">Congrats !! </h3>
+    <div class=" flex justify-center w-full pt-2">
+      <img src="./assets/coin.png" alt="" class="w-1/12"  >
+    </div>
+    <p class="py-4  text-center">You Have Donated For HumanKind</p>
+    <p class="py-2  text-center text-2xl font-extrabold">Successfully</p>
+    <div class="modal-action flex justify-center">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn font-extrabold">Close Confirmation</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
     <footer class="bg-[#F9F7F3] mt-12 p-14" id="footer"></footer>
     <script src="./js/index.js"></script>

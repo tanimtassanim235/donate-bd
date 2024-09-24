@@ -1,5 +1,5 @@
 
-document.getElementById('blog').addEventListener('click', function(){
+document.getElementById('blog').addEventListener('click', function () {
     console.log('blog clicked');
     // window.location.href = ''
 })
@@ -11,20 +11,23 @@ noakhaliDonation.addEventListener('click', function () {
     const addMoneyDonation = parseFloat(document.getElementById('noakhali-input').value);
     const totalBalance = parseFloat(document.getElementById('noakhali-donation-balance').innerText);
 
-    if(addMoneyDonation <= 0 || isNaN(addMoneyDonation) || addMoneyDonation == '') {
+    if (addMoneyDonation <= 0 || isNaN(addMoneyDonation) || addMoneyDonation == '') {
         alert('Invalid Donation Amount');
         return;
     }
 
     const remainingAccountBalance = parseFloat(document.getElementById('account-balance').innerText);
 
-    if(addMoneyDonation > remainingAccountBalance) {
+    if (addMoneyDonation > remainingAccountBalance) {
         alert('Not Saficient Balance');
         return
     }
+    else {
+        document.getElementById('my_modal_5').showModal()
+    }
 
     const newBalance = totalBalance + addMoneyDonation;
-    
+
     document.getElementById('noakhali-donation-balance').innerText = newBalance.toFixed(2);
 
 
@@ -56,7 +59,7 @@ noakhaliDonation.addEventListener('click', function () {
 const historybtn = document.getElementById('history-btn');
 const donationbtn = document.getElementById('donation-btn');
 
-historybtn.addEventListener('click', function(){
+historybtn.addEventListener('click', function () {
     historybtn.classList.add(
         'bg-lime-300',
     );
@@ -65,7 +68,7 @@ historybtn.addEventListener('click', function(){
         'text-gray-600',
         'bg-white'
     );
-        donationbtn.classList.remove(
+    donationbtn.classList.remove(
         'bg-lime-300'
     );
     donationbtn.classList.add('text-gray-600');
@@ -75,7 +78,7 @@ historybtn.addEventListener('click', function(){
     // document.getElementById('footer').classList.add('hidden');
 });
 
-donationbtn.addEventListener('click', function(){
+donationbtn.addEventListener('click', function () {
     donationbtn.classList.add(
         'bg-lime-300',
         'text-black'
@@ -88,3 +91,8 @@ donationbtn.addEventListener('click', function(){
     document.getElementById('main-section').classList.remove('hidden');
     document.getElementById('footer').classList.remove('hidden');
 })
+
+
+// function make() {
+//     document.getElementById('my_modal_5').showModal();
+// }
