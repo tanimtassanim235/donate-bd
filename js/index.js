@@ -1,7 +1,7 @@
 
 document.getElementById('blog').addEventListener('click', function(){
     console.log('blog clicked');
-    window.location.href = '../blog.html'
+    // window.location.href = ''
 })
 
 
