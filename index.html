@@ -25,16 +25,19 @@
       .lexend {
         font-family: "Lexend", sans-serif;
       }
+      /* .back-color {
+      color: #B4F461;
+      } */
     </style>
   </head>
   <body class="lexend">
-    <header class="sticky top-0">
+    <header class="sticky top-0 backdrop-blur-md">
       <!-- Navbar  -->
       <div class="bg-[#F9F7F3] pb-20 md:pt-6 lg:pt-6 pt-5">
         <div class="navbar container mx-auto">
           <div class="navbar-start">
             <button
-              class="btn md:btn-lg lg:btn-lg btn-md bg-[#B4F461] text- text-xl font-bold"
+              class="btn md:btn-lg lg:btn-lg btn-md bg-[#B4F461] text- text-xl font-bold" id="blog"
             >
               Blog
             </button>
@@ -62,17 +65,17 @@
       <!-- Donation & History Button -->
 
       <div
-        class="mx-auto flex justify-center items-center pt-16 gap-5 border-2 backdrop-blur-md"
+        class="mx-auto flex justify-center items-center pt-16 gap-5 border-2 "
       >
         <button
           id="donation-btn"
-          class="btn btn-md lg:btn-lg bg-[#B4F461] text-xl hover:bg-[#B4F461] hover:text-xl"
+          class="btn btn-md lg:btn-lg bg-lime-300 text-2xl"
         >
           Donation
         </button>
         <button
           id="history-btn"
-          class="btn btn-md lg:btn-lg text-xl text-gray-600 bg-white border-gray-600"
+          class="btn btn-md lg:btn-lg text-2xl bg-l text-gray-600 bg-white  border-gray-600"
         >
           History
         </button>
@@ -80,7 +83,7 @@
     </header>
 
     <!-- main section started  -->
-    <main class="mt-8 container mx-auto">
+    <main class="mt-10 container mx-auto" id="main-section">
       <!-- Noakhali section  -->
       <div
         class="flex justify-start border-gray-300 border-2 rounded-lg container mx-auto"
@@ -94,10 +97,10 @@
               <div>
                 <img src="./assets/coin.png" alt="" />
               </div>
-              <h4 class="text-xl"><span id="">0</span> BDT</h4>
+              <h4 class="text-xl"><span id="noakhali-donation-balance">0</span> BDT</h4>
             </div>
 
-            <h1 class="text-3xl font-bold py-3">
+            <h1 class="text-3xl font-bold py-3" id="noakhali-title">
               Donate for Flood at Noakhali, Bangladesh
             </h1>
             <p class="py-6 text-xl">
@@ -109,12 +112,13 @@
               lives of those in need.
             </p>
             <input
-              type="text"
+              type="number"
+              id="noakhali-input"
               class="w-full p-4 rounded-lg"
               placeholder="Write Donation Amount"
             />
             <button
-              class="btn btn-wide w-full bg-[#B4F461] mt-4 text-xl hover:bg-[#B4F461] hover:text-xl"
+              class="btn btn-wide w-full bg-[#B4F461] mt-4 text-xl hover:bg-[#B4F461] hover:text-xl" id="noakhali-donation"
             >
               Donate Now
             </button>
@@ -135,7 +139,7 @@
               <div>
                 <img src="./assets/coin.png" alt="" />
               </div>
-              <h4 class="text-xl"><span id="">0</span> BDT</h4>
+              <h4 class="text-xl"><span id="cumilla-donation-balance">0</span> BDT</h4>
             </div>
 
             <h1 class="text-3xl font-bold py-3">
@@ -150,12 +154,13 @@
               lives of those in need.
             </p>
             <input
-              type="text"
+              type="number"
+              id="cumilla-input"
               class="w-full p-4 rounded-lg mt-3"
               placeholder="Write Donation Amount"
             />
             <button
-              class="btn btn-wide w-full bg-[#B4F461] mt-10 text-xl hover:bg-[#B4F461] hover:text-xl"
+              class="btn btn-wide w-full bg-[#B4F461] mt-10 text-xl hover:bg-[#B4F461] hover:text-xl" id="cumilla-donation"
             >
               Donate Now
             </button>
@@ -174,7 +179,7 @@
               <div>
                 <img src="./assets/coin.png" alt="" />
               </div>
-              <h4 class="text-xl"><span id="">0</span> BDT</h4>
+              <h4 class="text-xl"><span id="health-donation-balance">0</span> BDT</h4>
             </div>
 
             <h1 class="text-3xl font-bold py-3">
@@ -189,12 +194,13 @@
               lives of those in need.
             </p>
             <input
-              type="text"
+              type="number"
+              id="health-input"
               class="w-full p-4 rounded-lg"
               placeholder="Write Donation Amount"
             />
             <button
-              class="btn btn-wide w-full bg-[#B4F461] mt-5 text-xl hover:bg-[#B4F461] hover:text-xl"
+              class="btn btn-wide w-full bg-[#B4F461] mt-5 text-xl hover:bg-[#B4F461] hover:text-xl" id="health-donation"
             >
               Donate Now
             </button>
@@ -202,7 +208,12 @@
         </div>
       </div>
     </main>
+<!-- History Section -->
+    <div id="history-details" class="rounded-xl shadow-md  pt-7  container mx-auto hidden" >
+      <div id="history-list"></div>
+    </div>
 
-    <footer class="bg-[#F9F7F3] mt-12 p-14"></footer>
+    <footer class="bg-[#F9F7F3] mt-12 p-14" id="footer"></footer>
+    <script src="./js/index.js"></script>
   </body>
 </html>
